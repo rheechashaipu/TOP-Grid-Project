@@ -1,0 +1,51 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.title > * {
+	width: auto;
+	height: 10vh;
+	line-height: 10vh;
+
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	text-decoration: underline;
+	font-family: "Georgia",serif;
+	color: #BCB29E;
+}
+
+hr {
+	margin:0;
+	padding:0;
+}
+
+.button-menu {
+	width: auto;
+	border-bottom: 2px solid;
+	border-bottom-color: #d3d3d3;
+	text-align: center;
+}
+
+button {
+	align:center;
+	padding: 3px 15px;
+	margin-right: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #BCB29E;
+	font-family: "Impact", serif
+}
+
+.grid {
+	height: 80vh;
+	width: 50vw;
+	border: solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
