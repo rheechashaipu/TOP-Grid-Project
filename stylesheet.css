@@ -52,8 +52,7 @@ button {
 
 .boxes{
 	display: inline-block;
-	border-width: 1px;
-	border-style: solid;
+
 	float: left;
 	margin: 0px;
 	padding: 0px;

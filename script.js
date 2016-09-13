@@ -1,5 +1,5 @@
 function appendDivs(rows){
-	var boxsize = $(".container").width()/(rows)-4;
+	var boxsize = $(".container").width()/(rows);
 	console.log(boxsize);
 	//$(".boxes").width(boxsize+"px");
 	//$(".boxes").height(boxsize+"px");
@@ -11,23 +11,29 @@ function appendDivs(rows){
 
 };
 
-appendDivs(2);
-
 
 
 var resetcontainer = function resetcontainer(){
-	$(".container").empty();
+	$(".boxes").remove();
 	var dimensions = prompt("Enter number");
 	//console.log(rows,columns);
 	appendDivs(dimensions);
 };
 
 
+var colorChange = function colorChange(){
+	$(".boxes").css('background-color','red');
+};
 
 
 
 
 $(".reset").on('click', resetcontainer);
+
+$(document.body).on("mouseover", ".boxes", (function(){
+	console.log($);
+	$(this).css('background-color','red');
+}));
 
 
 //$('.container').append($('<div class="boxDiv"></div>'));
