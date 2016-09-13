@@ -1,7 +1,7 @@
 html,
 body {
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
 }
 
 .title > * {
@@ -41,11 +41,22 @@ button {
 	font-family: "Impact", serif
 }
 
-.grid {
-	height: 80vh;
-	width: 50vw;
-	border: solid;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
+.container {
+	display: block;
+	width: 960px;
+	height: 960px;
+	margin: 0 auto;
+}
+
+
+
+.boxes{
+	display: inline-block;
+	border-width: 1px;
+	border-style: solid;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	background-color: silver;
+
 }
