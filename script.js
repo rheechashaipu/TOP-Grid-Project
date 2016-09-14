@@ -47,7 +47,6 @@ $(document).ready(function(){
 	});
 
 	$(".opacity").click(function(){
-		resetcontainer();
 		$(".boxes").unbind();
 		opaqueness();
 	});
