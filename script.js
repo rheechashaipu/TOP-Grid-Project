@@ -1,6 +1,13 @@
+//colors squares gray 
+function defaultColoring(){
+	$(".boxes").mouseover(function(){
+		$(this).css('background-color', 'gray');
+	});
+};
+
+//appends divs to container
 function appendDivs(rows){
 	var boxsize = $(".container").width()/(rows);
-	console.log(boxsize);
 	//$(".boxes").width(boxsize+"px");
 	//$(".boxes").height(boxsize+"px");
 	for(var i=0;i<rows*rows;i++){
@@ -8,32 +15,42 @@ function appendDivs(rows){
 	}
 	$(".boxes").height(boxsize);
 	$(".boxes").width(boxsize);
-
 };
 
-
-
-var resetcontainer = function resetcontainer(){
+//removes divs from container, adds new divs to
+function resetcontainer(){
 	$(".boxes").remove();
-	var dimensions = prompt("Enter number");
+	var dimensions = prompt("Enter desired width and height:");
 	//console.log(rows,columns);
 	appendDivs(dimensions);
 };
 
+function opaqueness(){
+	$(".boxes").css('background-color','gray');
 
-var colorChange = function colorChange(){
-	$(".boxes").css('background-color','red');
-};
-
-
-
-
-$(".reset").on('click', resetcontainer);
-
-$(document.body).on("mouseover", ".boxes", (function(){
-	console.log($);
-	$(this).css('background-color','red');
-}));
+	$(".boxes").mouseover(function(){
+		$(this).css('opacity', $(this).css('opacity')-0.2);
+	});
+}
 
 
-//$('.container').append($('<div class="boxDiv"></div>'));
+//initial grid, buttons function when document is loaded
+$(document).ready(function(){
+	appendDivs(6,6)
+	defaultColoring();
+
+	$(".button-menu").on('click', '.reset', function(){
+		resetcontainer();
+		//unbind removes all event listeners from .boxes
+		$(".boxes").unbind();
+		defaultColoring();
+	});
+
+	$(".opacity").click(function(){
+		resetcontainer();
+		$(".boxes").unbind();
+		opaqueness();
+	});
+
+
+});
