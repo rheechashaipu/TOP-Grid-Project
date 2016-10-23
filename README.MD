@@ -1,6 +1,6 @@
 This is the "Etch-A-Sketch" project from The Odin Project.
 
-To use this sketching program, you may go to this [link](http://htmlpreview.github.io/?https://github.com/rheechashaipu/TOP-Grid-Project/blob/master/index.html)
+To use this sketching program, you may go to this [link](https://rheechashaipu.github.io/TOP-Grid-Project/)
 
 Or you can download the repo and simply open the index.html file.
 
