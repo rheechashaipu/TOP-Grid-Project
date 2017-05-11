@@ -20,7 +20,7 @@ function appendDivs(rows){
 //removes divs from container, adds new divs to
 function resetcontainer(){
 	$(".boxes").remove();
-	var dimensions = prompt("Enter desired width and height:");
+	var dimensions = prompt("Enter divs per row:");
 	//console.log(rows,columns);
 	appendDivs(dimensions);
 };
